@@ -1,0 +1,32 @@
+<section class="app2 team bg-light "
+  style="background-image: url(assets/images/h2-bg.png); object-fit: fill; background-repeat: no-repeat;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="title title2 title-inner">
+          <div class="main-title">
+            <h2 class="font-primary borders text-center text-uppercase m-b-0">
+              <span class="">Certifications</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <owl-carousel-o [options]="teamcarouselOptions3" class="team-slider">
+          @for (team of testimonialcarousel3; track team) {
+          <ng-template carouselSlide class="item">
+            <div class="team-container"  style="min-height: 230px;">
+              <img [src]="team.img" alt="" class="img-fluid members" />
+              <div class="text-center">
+                <h5 class="name text-center">{{ team.name }}</h5>
+                <h6 class="post text-center">{{ team.designation }}</h6>
+                <p class="team-para text-center">{{ team.description }}</p>
+              </div>
+            </div>
+          </ng-template>
+          }
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</section>

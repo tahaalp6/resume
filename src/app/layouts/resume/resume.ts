@@ -8,12 +8,11 @@ import { ResumeFooter } from "./resume-footer/resume-footer";
 import { ResumeHeader } from "./resume-header/resume-header";
 import { ResumeNav } from "./resume-nav/resume-nav";
 import { ResumePortfolio } from "./resume-portfolio/resume-portfolio";
-import { ResumePricing } from "./resume-pricing/resume-pricing";
 import { ResumeSchedule } from "./resume-schedule/resume-schedule";
 import { ResumeServices } from "./resume-services/resume-services";
-import { ResumeSubscribe } from "./resume-subscribe/resume-subscribe";
 import { Contact } from "./resume-contact/contact";
 import { EducationAbout } from "./education-about/education";
+import { Testimonial } from "./testimonial/testimonial";
 
 @Component({
   selector: "app-resume",
@@ -24,12 +23,11 @@ import { EducationAbout } from "./education-about/education";
     ResumeHeader,
     ResumeNav,
     ResumePortfolio,
-    ResumePricing,
     ResumeSchedule,
     ResumeServices,
-    ResumeSubscribe,
     Contact,
     EducationAbout,
+    Testimonial,
   ],
   templateUrl: "./resume.html",
   styleUrls: ["./resume.scss"],
