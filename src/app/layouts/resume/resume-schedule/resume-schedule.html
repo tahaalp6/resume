@@ -1,0 +1,54 @@
+<!--schedule start-->
+<section class="resume schedule" id="experience">
+  <div class="container">
+    <div class="title title2">
+      <div class="row">
+        <div class="offset-md-2 col-md-8">
+          <h6 class="font-primary borders main-text text-uppercase">
+            <span>details</span>
+          </h6>
+          <div class="sub-title">
+            <div class="">
+              <h2 class="title-text">Experience</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="event-container scrollbar">
+          <div>
+            @for(data of schedule; track data){
+            <div class="cal-time events">
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="schedule-event">
+                    <h4 class="names">{{data.name}}</h4>
+                    <img
+                      [src]="data.img"
+                      alt=""
+                      class="img-fluid schedule-img"
+                    />
+                    <p class="schedule-description">{{data.description}}</p>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="timing">
+                    <h5 class="event-time">{{data.endTime}}</h5>
+                    <div class="border-container">
+                      <div class="border-dashed"></div>
+                    </div>
+                    <h5 class="event-time">{{data.toTime}}</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--schedule end-->

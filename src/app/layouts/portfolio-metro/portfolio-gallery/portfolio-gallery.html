@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-12">
+    <div class="filter-container isotopeFilters">
+      <ul class="list-inline filter">
+        <li [ngClass]="{'active': customizer === 'all' }">
+          <a (click)="openGallery('all')">All </a>
+        </li>
+        <li [ngClass]="{'active': customizer === 'Angular' }">
+          <a (click)="openGallery('Angular')">Angular</a>
+        </li>
+        <li [ngClass]="{'active': customizer === 'MongoDB' }">
+          <a (click)="openGallery('MongoDB')">MongoDB</a>
+        </li>
+        <li [ngClass]="{'active': customizer === 'Pure HTML CSS' }">
+          <a (click)="openGallery('Pure HTML CSS')">Pure HTML CSS</a>
+        </li>
+        <li [ngClass]="{'active': customizer === 'Vue' }">
+          <a (click)="openGallery('Vue')">Vue</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="isotopeContainer row" gallerize>
+  @if(customizer==='all'){ @for(img of imageData; track img){
+  <figure class="p-width isotopeSelector" itemprop="associatedMedia">
+    <div class="overlay">
+      <a [href]="img.srcUrl" target="_blank" itemprop="contentUrl">
+        <img
+          [src]="img.previewUrl"
+          class="img-fluid"
+          alt
+          style="height: -webkit-fill-available; object-fit: cover"
+        />
+      </a>
+    </div>
+  </figure>
+  } } @if(customizer==='Angular'){
+
+  <app-angular class="w-100" />
+
+  } @if(customizer==='MongoDB'){
+  <app-mongo-db class="w-100" />
+  } @if(customizer==='Pure HTML CSS'){
+  <app-html-css class="w-100" />
+  } @if(customizer==='Vue'){
+  <app-vue class="w-100" />
+  }
+</div>
